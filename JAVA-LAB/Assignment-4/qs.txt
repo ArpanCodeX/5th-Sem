@@ -1,0 +1,6 @@
+1. wap in java to define a class car with speedlimit (instance variable) and a method race(). Define another class BMW that inherits class car.
+(i) set speedlimit as final and try to change it.
+(ii) set race() method as final and try to override it.
+(iii) set car class as final and try to inherit it.
+
+2.

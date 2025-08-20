@@ -1,0 +1,41 @@
+1. wap to print your name.
+2. wap to find the two roots of a user inputed equn using Shridhar acharya formula.
+3. wap to check even or odd
+4. wap to find largest/smallest of three no.
+5. wap to check pallindrom or not
+6. wap to check Armstrong or not
+7.factorial
+8. 1 - 1/2! + 1/3! - 1/4! + ---- 1/n!
+9. 1 + 1/2! - 1/3! + 1/4! - ----- 1/n!
+10. Fibonacci
+
+11.
+   *
+  ****
+ ******
+********
+ ******
+  ****
+   *
+
+12.
+
+13.
+
+14.sum of even number of an inputed array
+
+15. matrix multiplication
+
+16.row sum and column sum of a 2D array
+
+17. wap a menu driven program to make a basic calculator.
+
+18. cel to f conversion
+
+19. neon number
+
+20. binary to decimal
+
+21. decimal to binary
+
+22. find prime numbers of a user inputed range.
