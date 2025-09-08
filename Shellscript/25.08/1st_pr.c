@@ -10,7 +10,7 @@ int main(void){
         printf("Child process: p=%d\n",p);
         printf("Child process: PID is %d\n", getpid());
         printf("Parent process: PPID is %d\n", getppid());
-        sleep(1000);
+        sleep(1000000);
     }else{
         
         printf("Parent process: p=%d\n",p);

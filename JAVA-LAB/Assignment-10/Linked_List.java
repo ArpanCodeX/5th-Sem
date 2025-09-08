@@ -19,18 +19,5 @@ class Linked_List {
         String val = ll.get(2);
         ll.set(2, val + "changed");
         System.out.println(ll);
-        // ArrayList<Integer> ll = new ArrayList<>();
-        // ll.add(1);
-        // ll.add(2);
-        // Integer a[] = new Integer[ll.size()];
-        // a = ll.toArray(a);
-        // int s=0;
-        // for (int i : a) {
-        //     System.out.println(i);
-
-        //     s+=i;
-        // }
-        // System.out.println(s);
-        // System.out.println(ll.get(0));
     }
 }

@@ -1,11 +1,3 @@
-// class Th extends Thread{
-//     public int count;
-//     public synchronized void increment(){
-//         count++;
-//     }
-
-// }
-
 class NewThread implements Runnable {
     String name;
     Thread t;
