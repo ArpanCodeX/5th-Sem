@@ -1,3 +1,13 @@
+/******************************************************************************
+ * ~Title: Preemptive Shortest Job First (PSJF) CPU Scheduling Algorithm
+ * ~Description: This program implements the PSJF scheduling algorithm with:
+ * ~             - Dynamic process selection based on remaining burst time
+ *  ~            - Preemptive execution (can interrupt running processes)
+ *              - Support for different arrival times
+ *              - Calculates Waiting Time (WT) and Turnaround Time (TAT)
+ *              - Displays per-process metrics and overall averages
+ ******************************************************************************/
+
 #include <stdio.h>
 int total_1, total_2, temp, i, j, pos, n, time, remain;
 int burstTime[20], waitTime[20], turnAroundTime[20], arrivalTime[20], process[20];

@@ -1,68 +1,80 @@
+/*
+ ! CPU Scheduling - Shortest Job First (SJF) Algorithm
+ * This program implements SJF scheduling and calculates:
+ * - Waiting time for each process
+ * - Turnaround time for each process
+ * - Average waiting time
+ * - Average turnaround time
+ */
+
 #include <stdio.h>
-int total_1, total_2, temp, i, j, pos, n;
-int burstTime[20], waitTime[20], turnAroundTime[20], arrivalTime[20], process[20];
-float avwt = 0, avtat = 0;
+int t1, t2, tmp, i, j, pos, n;
+int bt[20], wt[20], tat[20], at[20], p[20];
+float awt = 0, atat = 0;
 void main()
 {
     // Initialize arrays
-    for (i = 0; i < 20; i++)  // Using 20 as array size
+    for (i = 0; i < 20; i++) // Using 20 as array size
     {
-        burstTime[i] = 0;
-        waitTime[i] = 0;
-        turnAroundTime[i] = 0;
-        arrivalTime[i] = 0;
-        process[i] = 0;
+        bt[i] = 0;
+        wt[i] = 0;
+        tat[i] = 0;
+        at[i] = 0;
+        p[i] = 0;
     }
-    
+
     // Reset total counters
-    total_1 = 0;
-    total_2 = 0;
+    t1 = 0;
+    t2 = 0;
     printf("Enter Number of Processes: ");
     scanf("%d", &n);
     printf("Enter Burst Time and Arrival Time:\n");
     for (i = 0; i < n; i++)
     {
-        scanf("%d%d", &burstTime[i], &arrivalTime[i]);
-        process[i] = i + 1;
+        scanf("%d%d", &bt[i], &at[i]);
+        p[i] = i + 1;
     }
     for (i = 0; i < n; i++)
     {
         pos = i;
         for (j = i + 1; j < n; j++)
-            if (burstTime[j] < burstTime[pos])
+            if (bt[j] < bt[pos])
                 pos = j;
-        temp = burstTime[i];
-        burstTime[i] = burstTime[pos];
-        burstTime[pos] = temp;
-        temp = process[i];
-        process[i] = process[pos];
-        process[pos] = temp;
+        tmp = bt[i];
+        bt[i] = bt[pos];
+        bt[pos] = tmp;
+        tmp = p[i];
+        p[i] = p[pos];
+        p[pos] = tmp;
     }
     // Calculate waiting time
-    waitTime[0] = 0;  // First process has 0 waiting time
+    wt[0] = 0; // First process has 0 waiting time
     for (i = 1; i < n; i++)
     {
-        waitTime[i] = 0;
+        wt[i] = 0;
         for (j = 0; j < i; j++)
         {
-            waitTime[i] += burstTime[j];  // Sum of all previous burst times
+            wt[i] += bt[j]; // Sum of all previous burst times
         }
-        total_1 += waitTime[i];
+        t1 += wt[i];
     }
 
     // Calculate turnaround time and total
     for (i = 0; i < n; i++)
     {
-        turnAroundTime[i] = burstTime[i] + waitTime[i];
-        total_2 += turnAroundTime[i];
+        tat[i] = bt[i] + wt[i];
+        t2 += tat[i];
     }
-    avwt = total_1 / n;
-    avtat = total_2 / n;
+    awt = t1 / n;
+    atat = t2 / n;
     printf("\nProcess\tBurst Time\tArrival Time\tWaiting Time\tTurnaround Time\n");
     for (i = 0; i < n; i++)
     {
-        printf("%d\t%d\t\t%d\t\t%d\t\t%d\n", process[i], burstTime[i], arrivalTime[i], waitTime[i], turnAroundTime[i]);
+        printf("%d\t%d\t\t%d\t\t%d\t\t%d\n", p[i], bt[i], at[i], wt[i], tat[i]);
     }
-    printf("\nAverage Waiting Time: %.2f\n", avwt);
-    printf("Average Turnaround Time: %.2f\n", avtat);
+    printf("\nAverage Waiting Time: %.2f\n", awt);
+    printf("Average Turnaround Time: %.2f\n", atat);
 }
+
+
+
