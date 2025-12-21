@@ -1,10 +1,11 @@
 {
     "java.debug.settings.onBuildFailureProceed": true,
     "java.project.sourcePaths": [
+        "JAVA/28.08",
         "JAVA/26.08",
         "JAVA/21.08/Reverse",
         "JAVA/21.08",
         "JAVA-LAB/Assignment-11",
-        "JAVA/28.08"
+        "JAVA/21.07.25"
     ]
 }
