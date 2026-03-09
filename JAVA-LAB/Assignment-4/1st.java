@@ -68,7 +68,7 @@ class BMW extends Car {
 
 // Note:
 
-// 1. when a variable is declared as final it's known as a final variable. It's value cann't be changed once declared. It behaves like a constant
+// 1. when a variable is declared as final it's known as a final variable. It's value can't be changed once declared. It behaves like a constant
 // syntax: final dtype variableName = value;
 
 // 2. java final method : a method declared as final is known as a final method. Sub classes cannot override the final method.
